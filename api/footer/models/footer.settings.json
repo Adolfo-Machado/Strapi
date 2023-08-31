@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "name": "footer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "A Creative Digital Marketing Agency in North America"
+    },
+    "Email": {
+      "type": "email",
+      "default": "connect@bigroomcreative.com"
+    },
+    "Copyright": {
+      "type": "string",
+      "default": "© {year} Big Room Creative Inc."
+    },
+    "SocialLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.social-link"
+    }
+  }
+}

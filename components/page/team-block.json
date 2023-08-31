@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_team_blocks",
+  "info": {
+    "name": "TeamBlock",
+    "icon": "air-freshener"
+  },
+  "options": {},
+  "attributes": {
+    "Member": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.member"
+    }
+  }
+}
