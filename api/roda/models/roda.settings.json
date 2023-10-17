@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rodas",
+  "info": {
+    "name": "roda"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "integer"
+    }
+  }
+}

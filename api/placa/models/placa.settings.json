@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "placas",
+  "info": {
+    "name": "placa"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero_placa": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "carro": {
+      "via": "placa",
+      "model": "carros"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/motoristas",
+      "handler": "motoristas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/motoristas/count",
+      "handler": "motoristas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/motoristas/:id",
+      "handler": "motoristas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/motoristas",
+      "handler": "motoristas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/motoristas/:id",
+      "handler": "motoristas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/motoristas/:id",
+      "handler": "motoristas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

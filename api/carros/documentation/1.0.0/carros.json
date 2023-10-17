@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/clients": {
+    "/carros": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the carros's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve carros document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Client"
+                    "$ref": "#/components/schemas/Carros"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Carros"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new carros record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve carros document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Carros"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Carros"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewCarros"
               }
             }
           }
         }
       }
     },
-    "/clients/count": {
+    "/carros/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of carros documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve carros document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Carros"
         ],
         "parameters": []
       }
     },
-    "/clients/{id}": {
+    "/carros/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one carros record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve carros document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Carros"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Carros"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single carros record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve carros document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Carros"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Carros"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewCarros"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single carros record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single carros based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Carros"
         ],
         "parameters": [
           {
@@ -514,37 +514,98 @@
   },
   "components": {
     "schemas": {
-      "Client": {
+      "Carros": {
         "required": [
-          "id",
-          "Cod",
-          "Name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Cod": {
-            "type": "integer"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Email": {
-            "type": "string"
-          },
-          "Full_name": {
+          "nome": {
             "type": "string",
-            "maxLength": 80
+            "maxLength": 50
           },
-          "Age": {
-            "type": "integer"
+          "rodas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "numero": {
+                  "type": "integer"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "City": {
-            "type": "string"
+          "placa": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "numero_placa": {
+                "type": "string"
+              },
+              "carro": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "Url": {
-            "type": "string"
+          "motoristas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nome_motorista": {
+                  "type": "string"
+                },
+                "carros": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -552,33 +613,26 @@
           }
         }
       },
-      "NewClient": {
-        "required": [
-          "Cod",
-          "Name"
-        ],
+      "NewCarros": {
         "properties": {
-          "Cod": {
-            "type": "integer"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Email": {
-            "type": "string"
-          },
-          "Full_name": {
+          "nome": {
             "type": "string",
-            "maxLength": 80
+            "maxLength": 50
           },
-          "Age": {
-            "type": "integer"
+          "rodas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "City": {
+          "placa": {
             "type": "string"
           },
-          "Url": {
-            "type": "string"
+          "motoristas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -596,7 +650,7 @@
   },
   "tags": [
     {
-      "name": "Client"
+      "name": "Carros"
     }
   ]
 }

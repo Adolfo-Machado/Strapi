@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/clients": {
+    "/rodas": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Client"
+                    "$ref": "#/components/schemas/Roda"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Roda"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Roda"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Roda"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewRoda"
               }
             }
           }
         }
       }
     },
-    "/clients/count": {
+    "/rodas/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Roda"
         ],
         "parameters": []
       }
     },
-    "/clients/{id}": {
+    "/rodas/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Roda"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Roda"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Roda"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Roda"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewRoda"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Roda"
         ],
         "parameters": [
           {
@@ -514,37 +514,16 @@
   },
   "components": {
     "schemas": {
-      "Client": {
+      "Roda": {
         "required": [
-          "id",
-          "Cod",
-          "Name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Cod": {
+          "numero": {
             "type": "integer"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Email": {
-            "type": "string"
-          },
-          "Full_name": {
-            "type": "string",
-            "maxLength": 80
-          },
-          "Age": {
-            "type": "integer"
-          },
-          "City": {
-            "type": "string"
-          },
-          "Url": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -552,33 +531,10 @@
           }
         }
       },
-      "NewClient": {
-        "required": [
-          "Cod",
-          "Name"
-        ],
+      "NewRoda": {
         "properties": {
-          "Cod": {
+          "numero": {
             "type": "integer"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Email": {
-            "type": "string"
-          },
-          "Full_name": {
-            "type": "string",
-            "maxLength": 80
-          },
-          "Age": {
-            "type": "integer"
-          },
-          "City": {
-            "type": "string"
-          },
-          "Url": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -596,7 +552,7 @@
   },
   "tags": [
     {
-      "name": "Client"
+      "name": "Roda"
     }
   ]
 }

@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "clients",
   "info": {
-    "name": "Client"
+    "name": "Client",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,13 +16,26 @@
       "type": "integer",
       "required": true
     },
-    "name": {
+    "Name": {
       "type": "string",
       "required": true
     },
-    "email": {
+    "Email": {
       "type": "email",
-      "required": true
+      "required": false
+    },
+    "Full_name": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "Age": {
+      "type": "integer"
+    },
+    "City": {
+      "type": "string"
+    },
+    "Url": {
+      "type": "string"
     }
   }
 }

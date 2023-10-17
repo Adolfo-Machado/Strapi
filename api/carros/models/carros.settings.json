@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carros",
+  "info": {
+    "name": "carros",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "rodas": {
+      "collection": "roda"
+    },
+    "placa": {
+      "unique": true,
+      "model": "placa",
+      "via": "carro"
+    },
+    "motoristas": {
+      "collection": "motoristas",
+      "via": "carros",
+      "dominant": true
+    }
+  }
+}

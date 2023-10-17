@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/clients": {
+    "/motoristas": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the motoristas's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve motoristas document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Client"
+                    "$ref": "#/components/schemas/Motoristas"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Motoristas"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new motoristas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve motoristas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Motoristas"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Motoristas"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewMotoristas"
               }
             }
           }
         }
       }
     },
-    "/clients/count": {
+    "/motoristas/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of motoristas documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve motoristas document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Motoristas"
         ],
         "parameters": []
       }
     },
-    "/clients/{id}": {
+    "/motoristas/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one motoristas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve motoristas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Motoristas"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Motoristas"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single motoristas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve motoristas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Motoristas"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Motoristas"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewMotoristas"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single motoristas record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single motoristas based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Motoristas"
         ],
         "parameters": [
           {
@@ -514,37 +514,57 @@
   },
   "components": {
     "schemas": {
-      "Client": {
+      "Motoristas": {
         "required": [
-          "id",
-          "Cod",
-          "Name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Cod": {
-            "type": "integer"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Email": {
-            "type": "string"
-          },
-          "Full_name": {
+          "nome_motorista": {
             "type": "string",
-            "maxLength": 80
+            "maxLength": 50
           },
-          "Age": {
-            "type": "integer"
-          },
-          "City": {
-            "type": "string"
-          },
-          "Url": {
-            "type": "string"
+          "carros": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nome": {
+                  "type": "string"
+                },
+                "rodas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "placa": {
+                  "type": "string"
+                },
+                "motoristas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -552,33 +572,17 @@
           }
         }
       },
-      "NewClient": {
-        "required": [
-          "Cod",
-          "Name"
-        ],
+      "NewMotoristas": {
         "properties": {
-          "Cod": {
-            "type": "integer"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Email": {
-            "type": "string"
-          },
-          "Full_name": {
+          "nome_motorista": {
             "type": "string",
-            "maxLength": 80
+            "maxLength": 50
           },
-          "Age": {
-            "type": "integer"
-          },
-          "City": {
-            "type": "string"
-          },
-          "Url": {
-            "type": "string"
+          "carros": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -596,7 +600,7 @@
   },
   "tags": [
     {
-      "name": "Client"
+      "name": "Motoristas"
     }
   ]
 }

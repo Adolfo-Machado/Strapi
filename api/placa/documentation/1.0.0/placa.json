@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/clients": {
+    "/placas": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Client"
+                    "$ref": "#/components/schemas/Placa"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Placa"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Placa"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Placa"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewPlaca"
               }
             }
           }
         }
       }
     },
-    "/clients/count": {
+    "/placas/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Placa"
         ],
         "parameters": []
       }
     },
-    "/clients/{id}": {
+    "/placas/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Placa"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Placa"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Placa"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Placa"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewPlaca"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Placa"
         ],
         "parameters": [
           {
@@ -514,37 +514,54 @@
   },
   "components": {
     "schemas": {
-      "Client": {
+      "Placa": {
         "required": [
-          "id",
-          "Cod",
-          "Name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Cod": {
-            "type": "integer"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Email": {
-            "type": "string"
-          },
-          "Full_name": {
+          "numero_placa": {
             "type": "string",
-            "maxLength": 80
+            "maxLength": 10
           },
-          "Age": {
-            "type": "integer"
-          },
-          "City": {
-            "type": "string"
-          },
-          "Url": {
-            "type": "string"
+          "carro": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nome": {
+                "type": "string"
+              },
+              "rodas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "placa": {
+                "type": "string"
+              },
+              "motoristas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -552,32 +569,13 @@
           }
         }
       },
-      "NewClient": {
-        "required": [
-          "Cod",
-          "Name"
-        ],
+      "NewPlaca": {
         "properties": {
-          "Cod": {
-            "type": "integer"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Email": {
-            "type": "string"
-          },
-          "Full_name": {
+          "numero_placa": {
             "type": "string",
-            "maxLength": 80
+            "maxLength": 10
           },
-          "Age": {
-            "type": "integer"
-          },
-          "City": {
-            "type": "string"
-          },
-          "Url": {
+          "carro": {
             "type": "string"
           },
           "published_at": {
@@ -596,7 +594,7 @@
   },
   "tags": [
     {
-      "name": "Client"
+      "name": "Placa"
     }
   ]
 }

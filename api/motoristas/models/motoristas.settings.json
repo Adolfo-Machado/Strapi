@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "motoristas",
+  "info": {
+    "name": "motoristas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome_motorista": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "carros": {
+      "via": "motoristas",
+      "collection": "carros"
+    }
+  }
+}
