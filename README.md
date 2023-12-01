@@ -22,12 +22,13 @@ npm run strapi
 
 Usage: strapi [options] [command]
 
-Options:
-  -v, --version                                             Output the version number
-  -h, --help                                                Display help for command
+Options:  
+  -v, --version                                             Output the version number  
+  -h, --help                                                Display help for command  
 
-Commands:
-  version                                                   Output your version of Strapi
+| Commands:   | Descrição |
+|-------------|-----------|
+| version  | Output your version of Strapi |
   console                                                   Open the Strapi framework console
   new [options] <directory>                                 Create a new application
   start                                                     Start your Strapi application
