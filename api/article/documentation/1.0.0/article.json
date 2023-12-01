@@ -627,6 +627,9 @@
               }
             }
           },
+          "Template": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -646,6 +649,9 @@
             "type": "string"
           },
           "category": {
+            "type": "string"
+          },
+          "Template": {
             "type": "string"
           },
           "published_at": {

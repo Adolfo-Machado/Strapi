@@ -33,6 +33,9 @@
     "category": {
       "model": "category",
       "via": "articles"
+    },
+    "Template": {
+      "type": "richtext"
     }
   }
 }

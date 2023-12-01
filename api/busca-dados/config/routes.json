@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/busca-dados",
+      "handler": "busca-dados.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/busca-dados/count",
+      "handler": "busca-dados.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/busca-dados/:id",
+      "handler": "busca-dados.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/busca-dados",
+      "handler": "busca-dados.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/busca-dados/:id",
+      "handler": "busca-dados.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/busca-dados/:id",
+      "handler": "busca-dados.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

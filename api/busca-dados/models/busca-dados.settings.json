@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "busca_dados",
+  "info": {
+    "name": "BuscaDados",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ExtID": {
+      "type": "integer",
+      "required": true,
+      "unique": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "_from": "strapi-plugin-entity-relationship-chart@3.1.0",
+  "_id": "strapi-plugin-entity-relationship-chart@3.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-l7hHHl2ppZRPY22mpYqCrCtkQY4O9gkrEyq9umk5qdGMfbH2RnIcV2yRzTIhcVuJ9NByLcDvnfoPjHqiL5pXiA==",
+  "_location": "/strapi-plugin-entity-relationship-chart",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "strapi-plugin-entity-relationship-chart@3.1.0",
+    "name": "strapi-plugin-entity-relationship-chart",
+    "escapedName": "strapi-plugin-entity-relationship-chart",
+    "rawSpec": "3.1.0",
+    "saveSpec": null,
+    "fetchSpec": "3.1.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-entity-relationship-chart/-/strapi-plugin-entity-relationship-chart-3.1.0.tgz",
+  "_shasum": "a0d509c9826ad085bc72a58e7e33e54992c2221e",
+  "_spec": "strapi-plugin-entity-relationship-chart@3.1.0",
+  "_where": "C:\\projetos\\strapi\\backend",
+  "author": {
+    "name": "Node Vision",
+    "email": "info@nodevision.com.au",
+    "url": "https://nodevision.com.au"
+  },
+  "bugs": {
+    "url": "https://github.com/node-vision/strapi-plugin-entity-relationship-chart/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "dagre": "^0.8.5",
+    "storm-react-diagrams": "^5.2.1"
+  },
+  "deprecated": false,
+  "description": "Plugin displays Entity Relationship Diagram of all Strapi models, fields and relations.",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "homepage": "https://github.com/node-vision/strapi-plugin-entity-relationship-chart#readme",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Roman Mandryk"
+    }
+  ],
+  "name": "strapi-plugin-entity-relationship-chart",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-vision/strapi-plugin-entity-relationship-chart.git"
+  },
+  "strapi": {
+    "name": "Entity Relationship Chart",
+    "icon": "columns",
+    "description": "Plugin displays Entity Relationship Diagram of all Strapi models, fields and relations."
+  },
+  "version": "3.1.0"
+}

@@ -551,6 +551,9 @@
                 "category": {
                   "type": "string"
                 },
+                "Template": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
