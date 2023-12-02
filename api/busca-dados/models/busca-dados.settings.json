@@ -20,11 +20,11 @@
     "name": {
       "type": "string"
     },
-    "date": {
-      "type": "date"
-    },
     "slug": {
       "type": "string"
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

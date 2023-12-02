@@ -542,12 +542,12 @@
           "name": {
             "type": "string"
           },
+          "slug": {
+            "type": "string"
+          },
           "date": {
             "type": "string",
             "format": "date"
-          },
-          "slug": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -566,12 +566,12 @@
           "name": {
             "type": "string"
           },
+          "slug": {
+            "type": "string"
+          },
           "date": {
             "type": "string",
             "format": "date"
-          },
-          "slug": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",

@@ -13,11 +13,22 @@ module.exports = {
       await axios.get(`http://localhost:5000/api/data/${model.ExtID}`)
         .then((res) => {
           const { data } = res;
-          // console.log("teste beforeCreate" , data);
+          console.log("teste beforeCreate" , data);
           if (data) {
+
+            let year = Number(data.Data.substr(0, 4));
+            let month = Number(data.Data.substr(5, 2)) - 1;
+            let day = Number(data.Data.substr(8, 2));
+            console.log("year: ", year, "month: ", month, "day: ", day);
+            let formattedDate = new Date();
+            formattedDate.setUTCFullYear(year, month, day);
+            console.log('formattedDate', formattedDate);
+
             model.name = data.Nome;
-            model.date = data.Data;
+            // model.date = formattedDate;
+            // model.date = data.Data;
             model.slug = slugify(data.Nome, {lower: true}).concat('-',model.ExtID);
+            console.log('model após gravar', model);
           }
         }
       );
