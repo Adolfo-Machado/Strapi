@@ -25,6 +25,9 @@
     },
     "date": {
       "type": "date"
+    },
+    "stringDate": {
+      "type": "string"
     }
   }
 }
